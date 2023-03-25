@@ -35,9 +35,6 @@ const Board = () => {
       boxes.push(rows);
     }
 
-    const handleClick = () => {
-      console.log(board);
-    }
     return (
       <>
         <Winnermodal/>

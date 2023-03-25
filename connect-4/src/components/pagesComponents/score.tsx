@@ -10,7 +10,7 @@ export default function Score() {
   return (
     <div>
       {state.history.map(e => {
-        return <li key={state.history.indexOf(e)}>{e[0]} with {e[1]}</li>
+        return <li key={state.history.indexOf(e)}>{e[1] !== 0 ? `${e[0]} with ${e[1]}` : "Round Draw"}</li>
       })}
     </div>
   )

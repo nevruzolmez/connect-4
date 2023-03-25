@@ -35,7 +35,9 @@ export default function Usercreator () {
                 <input className='player-input' id='playerTwoNick' type='text' placeholder='Player Nickname'></input>
                 <input className='player-input' id='playerTwoAge' type='number' placeholder='Player Age'></input>
                 <br></br>
-              <button className="player-creator" type="submit" >Create Players</button>
+              <div className="btn-login">
+                <button className="player-creator" type="submit" >Create Players</button>
+              </div>
           </div>
         </form>
         {loginSuccess === false ? <div className="tryagain">Please fill the form</div> : ""}

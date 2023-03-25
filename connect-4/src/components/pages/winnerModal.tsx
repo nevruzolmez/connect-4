@@ -7,7 +7,8 @@ import Score from '../pagesComponents/score';
 export default function Winnermodal() {
     const state = useSelector(getBoard);
     const dispatch = useDispatch();
-    if(state.winner === "") return null;
+
+    if(state.winner === "" && state.counter > 0) return null;
 
     function newGame () {
         let players = state.players;
@@ -21,9 +22,9 @@ export default function Winnermodal() {
     <>
     <div className='page-modal-overlay'></div>
     <div className='page-modal'>
-        <div className='text-winner'> CONGRATS! {state.winner}, YOU WON!!</div>
+        <div className='text-winner'>{state.winner !== "" ? `CONGRATS! ${state.winner}, YOU WON` : "Round Draw!"}</div>
         <br></br>
-        <div className='text-winner'> Score : {state.counter} </div>
+        <div className='text-winner'> {state.counter !== 0 ? `Score : ${state.counter}` : ""} </div>
         <br></br>
         <button className='btn-modal' onClick={newGame}>Start a new game!</button>
         <br></br>
