@@ -100,11 +100,22 @@
   font-size: large;
   font-weight: bold;
 }
+.btn-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .player-creator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
   background-color:  #1877f2;
   color: white;
   font-family: fantasy;
   font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 5px;
 }
 .bxheader {
   display: flex;
@@ -118,24 +129,38 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 700px;
-  font-family: fantasy;
-  font-weight: bold;
+  width: 1000px;
 }
 .player-form {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  width: 350px;
+  border: 2px solid;
+  border-color: #1877f2;
+  background-color: #1877f2;
+  border-radius: 15px;
 }
 .player {
   display: flex;
   flex-direction: column;
-  width: 700px;
   justify-content: center;
   font-family: fantasy;
   font-weight: bold;
+  width: 300px;
+}
+.player-header {
+  display: flex;
+  justify-content: center;
+  color: white;
+  
 }
 .player-input {
+  display: flex;
+  text-align: center;
   font-family: fantasy;
   font-weight: bold;
+  border-radius: 15px;
+  margin: 1px;
+  box-shadow: none;
+  border: hidden;
 }

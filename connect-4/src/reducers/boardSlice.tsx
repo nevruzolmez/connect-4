@@ -84,7 +84,6 @@ const initialState: Gametype = {
                 }
                 for(let str of stack) {
                     for(let i = 0; i+3<str.length; i++) {
-                        let temp = str.substring(i,i+4);
                         if(str.substring(i,i+4) === "RRRR") {
                             state.winner = player1;
                             return state.winner;
@@ -145,7 +144,6 @@ const initialState: Gametype = {
                 }
                 for(let str of stack) {
                     for(let i = 0; i+3<str.length; i++) {
-                        let temp = str.substring(i,i+4);
                         if(str.substring(i,i+4) === "RRRR") {
                             state.winner = player1;
                             return state.winner;
@@ -160,12 +158,20 @@ const initialState: Gametype = {
                 rowCheck();
                 colCheck();
                 diagonalCheck();
+                if(state.counter === 0) {
+                    console.log("SHOULD BE DRAW=====>")
+                }
+                if(state.winner === "" && state.counter === 0) {
+                        state.history.push(["Round Draw", state.counter]);
+                        console.log(state.history);
+                }
                 if(state.winner === player1 || state.winner === player2){
                     console.log("THE WINNER IS ==> ", state.winner)
                 }
                 if(state.winner !== "") {
                     state.history.push([state.winner,state.counter])
                 }
+                
         },
         getTurn: (state,action) => {
             return state.turn
