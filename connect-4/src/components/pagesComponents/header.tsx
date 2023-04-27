@@ -10,7 +10,7 @@ export default function Header() {
     },[turn])
   return (
     <div className='bxheader'>
-        <h2>{state.turn} IS PLAYING!</h2>
+        <h2>{state.turn} IS PLAYING!!</h2>
         <br></br>
         <h3>Move Counter : {state.counter}</h3>
     </div>
